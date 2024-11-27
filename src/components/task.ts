@@ -35,11 +35,4 @@ function getTasks(): Task[] {
   return [...tasks];
 }
 
-export {
-  Task,
-  addTask,
-  removeTask,
-  displayTasks,
-  toggleTaskCompletion,
-  getTasks,
-};
+export { Task, addTask, removeTask, toggleTaskCompletion, getTasks };
