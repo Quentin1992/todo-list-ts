@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  h1 {
+    text-align: center;
+  }
+  button {
+    background-color: white;
+    margin-left: 0.5em;
+  }
+  .list-wrapper {
+    width: 400px;
+    margin: auto;
+    .task-list {
+      list-style-type: square;
+    }
+    .task-form {
+      text-align: center;
+      input {
+        border: none;
+        border-bottom: solid 1px;
+      }
+    }
+  }
+}

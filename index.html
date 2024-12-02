@@ -8,19 +8,19 @@
   <body>
     <h1>To-Do List</h1>
 
-    <!-- Formulaire pour ajouter une tâche -->
-    <form id="task-form">
-      <input
-        type="text"
-        id="task-input"
-        placeholder="Nouvelle tâche"
-        required
-      />
-      <button type="submit">Ajouter</button>
-    </form>
+    <div class="list-wrapper">
+      <ul id="task-list" class="task-list"></ul>
 
-    <!-- Liste des tâches -->
-    <ul id="task-list"></ul>
+      <form id="task-form" class="task-form">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="Ne pas oublier de..."
+          required
+        />
+        <button type="submit">Ajouter</button>
+      </form>
+    </div>
 
     <script src="./src/main.ts" type="module"></script>
   </body>
