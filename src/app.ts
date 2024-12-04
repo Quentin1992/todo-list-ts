@@ -24,14 +24,19 @@ function renderTasks(): void {
 
 function createTaskListElement(task: Task): HTMLLIElement {
   const li = document.createElement("li");
-  li.textContent = `${task.title} : ${
-    task.completed ? "complétée" : "à compléter"
-  }`;
-
-  li.addEventListener("click", () => {
+  const inputLabel = document.createElement("label");
+  const checkboxInput = document.createElement("input");
+  checkboxInput.type = "checkbox";
+  checkboxInput.checked = task.completed;
+  checkboxInput.addEventListener("click", (event) => {
+    event.stopPropagation();
     toggleTaskCompletion(task.id);
     renderTasks();
   });
+  inputLabel.appendChild(checkboxInput);
+  const inputLabelText = document.createTextNode(task.title);
+  inputLabel.appendChild(inputLabelText);
+  li.appendChild(inputLabel);
   return li;
 }
 
