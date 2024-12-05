@@ -6,6 +6,8 @@ import {
   getTasks,
 } from "./components/task";
 
+import binIcon from "./assets/bin.png";
+
 const form = document.getElementById("task-form") as HTMLFormElement;
 const input = document.getElementById("task-input") as HTMLInputElement;
 const taskList = document.getElementById("task-list") as HTMLUListElement;
@@ -42,7 +44,9 @@ function createTaskListElement(task: Task): HTMLLIElement {
 
 function createTaskDeleteButton(taskId: number): HTMLButtonElement {
   const button = document.createElement("button");
-  button.textContent = "Supprimer";
+  const icon = document.createElement("img");
+  icon.src = binIcon;
+  button.appendChild(icon);
   button.addEventListener("click", (event) => {
     event.stopPropagation();
     removeTask(taskId);
